@@ -49,7 +49,7 @@ var color = d3.scaleThreshold()
     .range(["#FCF3CF","#F1C40F","#F39C12","#E67E22","#E74C3C"," #C0392B","#8E44AD","#5B2C6F"]);
    
 //Legend
-var keys = ["0","3","5","7","9","11",">13"]
+var keys = ["1","3","5","7","9","11",">13"]
 
 // Usually you have a color scale in your chart already
 
