@@ -1,7 +1,6 @@
 # Ecological_Footprint
 ## Topic: Ecological Footprint Consumption Analysis
 
---
 
 ### Introduction
 
