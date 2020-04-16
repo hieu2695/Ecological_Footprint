@@ -37,7 +37,7 @@ var z = d3.scaleOrdinal()
 
 
 // load data
-d3.csv("../data/BarChart.csv", function(d, i, columns) {
+d3.csv("https://hieu2695.github.io/Ecological_Footprint//data/BarChart.csv", function(d, i, columns) {
     for (var i = 1, n = columns.length; i < n; ++i)
         d[columns[i]] = +d[columns[i]];
     //console.log(+d[columns[i]])
