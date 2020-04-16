@@ -143,6 +143,8 @@ function ready(error, topo, data) {
 		slider.property("value", Year);
         d3.select(".year").text(Year);
         GeoMap
+            .transition()
+            .duration(400)
             .style("fill", function(d) { 
                 if (d.prop[Year] !== undefined)
                     return color(d.prop[Year][0].EFConsPerCap);

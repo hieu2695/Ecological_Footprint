@@ -116,6 +116,8 @@ function ready(error, topo, data) {
         d3.select(".year1").text(Year);
         slider1.property("value", Year);
         GeoMap1
+        .transition()
+        .duration(400)
             .style("fill", function(d) { 
                 if (d.prop[Year] !== undefined)
                     return color1(d.prop[Year][0].DeRe);

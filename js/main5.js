@@ -113,6 +113,8 @@ function ready(error, topo, data) {
         d3.select(".year2").text(Year);
         slider2.property("value", Year);
         GeoMap2
+            .transition()
+            .duration(400)
             .style("fill", function(d) { 
                 if (d.prop[Year] !== undefined)
                     return color2(d.prop[Year][0].Percentage);
