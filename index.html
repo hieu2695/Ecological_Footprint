@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Ecological Footprint Data Visualization</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <!-- D3 Tooltip CSS -->
+    <link rel="stylesheet" href="css/d3-tip.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- External JS libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- External D3 JS libraries -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+
+
+</head>
+
+
+
+<body>
+    <body>
+    <div id="main">
+        <!-- fixed header to fix the header text and menubar while scrolling -->
+        <div id="fixed-header">
+            <div id="header">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="header_logo">
+                            <img src="image/EFlogo.jpg" id="logo"/>
+                        </div><!-- header_logo -->
+                    </div> <!-- col-md-2 -->
+
+                    <div class="col-md-10">
+                        <div id="header_text">
+                            <h1><center>Ecological Footprint Analysis</center></h1>
+                        </div> <!-- header_text -->
+
+                        <div id="menubar">
+                            <ul id="menu">
+                                <!-- setting bootstrap grid for menu -->
+                                <div class="col-md-2">
+                                    <li class="selected"><a href="index.html">Home</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="DeficitReserve.html">Deficit</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="Trend.html">Trend</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li ><a href="Land.html">Land</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="HDI.html">HDI</a></li>
+                                </div>
+                            </ul><!-- menu -->
+                        </div><!-- menubar -->
+                    </div><!-- col-md-10-->
+                </div><!-- row -->
+            </div><!-- header -->
+        </div><!--fixed header-->
+
+        <div id="content">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <h3>Introduction</h3>
+                <p>The ecological footprint is the measurement of human consumption of natural assets such as plant-based food, livestock and fish products, forest resources and space for urban infrastructure. In recent years, the growth in Earth’s population has led to the increasing demand for these resources, which causes the ecological footprint exceeds the biocapacity (the productive area that can renew resources and absorb generated wastes such as carbon emissions). To prevent negative effects from excessive use of natural resources, it is important for people and authorities to understand the trends in the ecological footprint. This project aims to visualize the ecological footprint data by different countries and regions in order to figure out the areas with the greatest ecological deficits and analyze the trends of ecological footprint consumption in regard to different factors.</p>
+                </br>
+                <h3>Data Collection</h3>
+                <p>The ecological footprint data was extracted from the National Footprint and Biocapacity Accounts 2019 Public Data Package provided by the <a href="https://www.footprintnetwork.org/licenses/public-data-package-free/" target="_blank">Global Footprint Network</a>. Additional data was downloaded from the  <a href="http://data.footprintnetwork.org/#/api/" target="_blank">Ecological Footprint Explorer open data platform</a> using the website's API.</p>
+                </br>
+                <h3>Overview</h3>
+                <p> Before the analysis, we will have a first glance at the geographical map of ecological footprint consumption per capita.<p>
+                </br>
+                <h4>Select Year:</h4>
+                <h4 class="year"></h4>
+                    <div class="slider"></div>
+                    <div id="geo-map-EF"></div>
+                <p>Overall, the countries that generate most ecological footprint per person are located at Middle East Asia and North America. United Arab Emirates (UAE) and Qatar are the two countries that always have high amount of ecological footprint consumption per capita. Before 2006, United States used to consume a large amount of natural resources. However, from 2006, the nation has reduced their consumption and maintained the amount of ecological footprint per capita at about 8 global hectares annually.</p>
+            </div> <!-- col-md-10-->  
+        </div><!-- content -->
+
+        </div><!--footer-->
+		<div id="copywrite">
+			COPYWRITE &copy; 
+			<script>
+			var d = new Date(); document.write(d.getFullYear());
+			</script> |
+			<a href="https://github.com/" target="blank">GitHub</a> |
+			<a href="http://www.zenodo.org" target="blank">Zenodo</a>
+		</div><!--footer-->
+    </div><!-- main -->
+
+
+<!-- Custom JS -->
+<script src="js/main0.js"></script>
+
+
+</body>
+
+</html>

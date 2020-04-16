@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Ecological Footprint Data Visualization</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <!-- D3 Tooltip CSS -->
+    <link rel="stylesheet" href="css/d3-tip.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- External JS libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- External D3 JS libraries -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+
+
+</head>
+
+
+
+<body>
+    <body>
+    <div id="main">
+        <!-- fixed header to fix the header text and menubar while scrolling -->
+        <div id="fixed-header">
+            <div id="header">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="header_logo">
+                            <img src="image/EFlogo.jpg" id="logo"/>
+                        </div><!-- header_logo -->
+                    </div> <!-- col-md-2 -->
+
+                    <div class="col-md-10">
+                        <div id="header_text">
+                            <h1><center>Ecological Footprint Analysis</center></h1>
+                        </div> <!-- header_text -->
+
+                        <div id="menubar">
+                            <ul id="menu">
+                                <!-- setting bootstrap grid for menu -->
+                                <div class="col-md-2">
+                                    <li><a href="index.html">Home</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="DeficitReserve.html">Deficit</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li class="selected"><a href="Trend.html">Trend</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li ><a href="Land.html">Land</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="HDI.html">HDI</a></li>
+                                </div>
+                            </ul><!-- menu -->
+                        </div><!-- menubar -->
+                    </div><!-- col-md-10-->
+                </div><!-- row -->
+            </div><!-- header -->
+        </div><!--fixed header-->
+
+        <div id="content">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <h3>Ecological Footprint Trend</h3>
+                <p>The line chart shows how the ecological footprint and the biocapacity in each region change annually. From the chart, we can know the time that the ecological deficit happened in a region.</p>
+                </br>
+                <h4>Select Region:</h4>
+                <!-- Initialize a select button -->
+                <select id="selectButton"></select>
+                <div id="line-chart"></div>
+                </br>
+                <p>According to the line chart, the biocapacity in each region is decreasing, while the ecological footprint consumption in the majority of regions is increasing. However, the global ecological footprint does not have much change. The amount fluctuates around 3 GHA and there is a small increase in the ecological footprint between 1961 and 2016. This result is because of the efforts of the North America and Europe countries in reducing the consumption of ecological footprint every year. The continent with the most increase in the ecological footprint consumption is Asia.</p>
+                </br>
+                <h3>Regional Trend</h3>
+                <p>The following grouped bar chart shows the deficit as the propotion of biocapacity and the percentage change in the amount of ecological footprint consumption between 1961 and 2016 in different regions.</p>
+                </br>
+                <div class="tooltip"></div>
+                <div id="bar-chart"></div>
+                <p>As can be seen from the bar chart, Eastern Asia and Western Asia have highest deficit rates in 2016 and also highest increases in the amount of ecological footprint consumption during 1961-2016. The region that has the least change in the ecological footprint is North America with only 1% increase between 1961 and 2016. In general, the majority of regions have increased their usage of natural assets during 1961-2016 and experienced the ecological deficits at the end of the period.</p>
+                
+        </div><!-- content -->
+    </div><!-- main -->
+
+
+<!-- Custom JS -->
+<script src="js/main2.js"></script>
+<script src="js/main3.js"></script>

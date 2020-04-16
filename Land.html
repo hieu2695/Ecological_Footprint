@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Ecological Footprint Data Visualization</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <!-- D3 Tooltip CSS -->
+    <link rel="stylesheet" href="css/d3-tip.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- External JS libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- External D3 JS libraries -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+
+
+</head>
+
+
+
+<body>
+    <body>
+    <div id="main">
+        <!-- fixed header to fix the header text and menubar while scrolling -->
+        <div id="fixed-header">
+            <div id="header">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="header_logo">
+                            <img src="image/EFlogo.jpg" id="logo"/>
+                        </div><!-- header_logo -->
+                    </div> <!-- col-md-2 -->
+
+                    <div class="col-md-10">
+                        <div id="header_text">
+                            <h1><center>Ecological Footprint Analysis</center></h1>
+                        </div> <!-- header_text -->
+
+                        <div id="menubar">
+                            <ul id="menu">
+                                <!-- setting bootstrap grid for menu -->
+                                <div class="col-md-2">
+                                    <li><a href="index.html">Home</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="DeficitReserve.html">Deficit</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="Trend.html">Trend</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li class="selected"><a href="Land.html">Land</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="HDI.html">HDI</a></li>
+                                </div>
+                            </ul><!-- menu -->
+                        </div><!-- menubar -->
+                    </div><!-- col-md-10-->
+                </div><!-- row -->
+            </div><!-- header -->
+        </div><!--fixed header-->
+
+        <div id="content">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <h3>Land Type</h3>
+                <p>In this section, we analyze the ecological footprint consumption by six land types: Carbon, Grazing Land, Forest Products, Built-up Land, Fishing Grounds and Cropland.<p/>
+                </br>
+                <h4>Select Region:</h4>
+                <select id="selectButton"></select>
+                <div id="stack-chart"></div>
+                <p>The stacked area chart shows that the majority ecological footprint globally is generated from Carbon Land. It is noteworthy that in every region, Built-up Land and Fishing Ground have the least consumption. These two types of land are often in use of agriculture statistics rather than being places for livings and exploitation. Africas and Latin Americas have the most balanced ecological footprint consumption in the other four land types, while other regions primarily exploit Carbon Land for natural resources.</p>
+            </div> <!-- col-md-10-->  
+        </div><!-- content -->
+    </div><!-- main -->
+
+
+<!-- Custom JS -->
+<script src="js/main1.js"></script>
+
+
+</body>
+
+</html>

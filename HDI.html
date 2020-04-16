@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <!-- D3 Tooltip CSS -->
+    <link rel="stylesheet" href="css/d3-tip.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- External JS libraries -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- External D3 JS libraries -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3-tip.js"></script>
+    
+    
+    
+    
+    
+    
+    
+
+
+</head>
+
+
+
+<body>
+    <div id="main">
+        <div id="fixed-header">
+            <div id="header">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="header_logo">
+                            <img src="image/EFlogo.jpg" id="logo"/>
+                        </div><!-- header_logo -->
+                    </div> <!-- col-md-2 -->
+
+                    <div class="col-md-10">
+                        <div id="header_text">
+                            <h1><center>Ecological Footprint Analysis</center></h1>
+                        </div> <!-- header_text -->
+
+                        <div id="menubar">
+                            <ul id="menu">
+                                <!-- setting bootstrap grid for menu -->
+                                <div class="col-md-2">
+                                    <li><a href="index.html">Home</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="DeficitReserve.html">Deficit</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li><a href="Trend.html">Trend</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li ><a href="Land.html">Land</a></li>
+                                </div>
+                                <div class="col-md-2">
+                                    <li class="selected"><a href="HDI.html">HDI</a></li>
+                                </div>
+                            </ul><!-- menu -->
+                        </div><!-- menubar -->
+                    </div><!-- col-md-10-->
+                </div><!-- row -->
+            </div><!-- header -->
+        </div><!--fixed header-->
+
+        <div id="content">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <h3>Sustainable Human Development</h3>
+                <p>Sustainable human development measures how people thrive within the means of our Earth. There are two indicators for the sustainable development: Human Development Index (HDI) which represents how well people live based on the progress in longevity, education and income; and ecological footprint consumption which determines whether people live within the means of the Earth. The expected HDI value is 0.7 which is the criteria for a high human development community; and the ecological footprint under 1 number of Earths represents that the natural resources comsumption is within the means of our planet. The following gapmider graph shows the scatterplot between HDI and ecological footprint during 1990-2016 in about 180 countries from 8 regions.</p>
+                </br></br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <button id="play-button" class="btn btn-primary">Play</button>
+                            <button id="reset-button" class="btn btn-primary">Reset</button>
+                            <div id="slider-div">
+                                <label>Year: <span id="year">1990</span></label>
+                                <div id="date-slider"></div>
+                            </div> <!-- slider-div-->
+                        </div><!--col-md-5-->
+                        <div class="col-md-5">
+                            <select id="continent-select" class="form-control">
+                                <option selected value="all">All</option>
+                                <option value="Africa">Africa</option>
+                                <option value="Asia-Pacific">Asia Pacific</option>
+                                <option value="Central America/Caribbean">Caribbean</option>
+                                <option value="EU-28">Europe</option>
+                                <option value="Middle East/Central Asia">Middle East Asia</option>
+                                <option value="North America">North America</option>
+                                <option value="Non-EU Europe">Non-EU Europe</option>
+                                <option value="South America">South America</option>
+                            </select>
+                        </div><!--col-md-5-->
+                    </div><!--row-->
+                    <div id="gapmider-chart"></div> 
+                </div><!--container-->
+                <p>According to the graph, the regions that have highest Human Development Index are Europe and North America, while Africa has very low HDI. The countries such as United States, Germany, United Kingdoom and Switerland maintain their HDI above 0.8 during 1990-2016 and reach a desirable value at 0.9 at the end of 2016. In contrast, many countries in Africa are struggling in improving their quality of livings. In this continent, there is no place reaching the standard development and many countries have been experiencing very low HDI (under 0.3) during 1990s. The condition in Africa has been improved in the 21st centuray, even though there are still some countries having difficulty in developing their longevity, education and income.</p>
+                <p>Looking at the ecological footprint, the majority of countries in the world have been living more than the means of our planet. As can be seen from the chart, the countries with low HDI comsume small amount of natural resources, while the most developed nations like United States, Qatar and Australia have very high ecological footpring consumption. It appears that there is a relationship between the comsumption of ecological footprint and HDI. For each region, the HDI and ecological footprint seem to have a positive linear correlation. When the human development in a country grows, its demand for natural assests tend to increase as well. Therefore, reaching a sustainable development is a difficult task for every nation. The payment for better longevity, more advanced education and higher income is the increasing use of natural resources, which causes the ecological footprint consumption exceeds the means of our Earth.</p>
+                </br>
+                <h3>Key Findings</h3>
+                <p>There are some key findings to summarize from this project:</p>
+                <p>- The majority of Asia and Europe countries have been experiencing a considerable amount of ecological deficit. The region with the highest propotion of deficit is Middle East/Central Asia. The usage of natural resources in Middle East Asia have also rapidly increased during 1961-2016. On the other hand, South America has the best reserve of biocapacity.</p>
+                <p>- The global ecological footprint consumption has been maintained at about 3.0 GHA since 1961. However, the decrease in the biocapacity has led to the deficits in many regions. Carbon is the most exploited type of land to produce natural assets, whereas Fishing Grounds and Built-up Lands produce least ecological footprint consumptions.</p>
+                <p>- The ecological footprint consumption per capita appears to be very high in developed countries. The reason is that these countries require a large amount of natural resources to supplement their residents' livings and improve their education and GDP. In contrast, the smallest economies primarily located in Africa have very low ecological footprint usage (approximately 1.7 GHA or 1.0 number of Earths). This indicates that there seems to be a linear correlation between the human development and the consumption of natural assets. Therefore, it is a difficult task for governments to lead their countries to achieve the desirable sustainable development (0.7 HDI and 1.7 GHA ecological footprint per capita).</p>
+            </div><!--col-md-10-->
+        </div><!--content-->
+    </div><!--main-->
+
+
+
+
+<!-- Custom JS -->
+<script src="js/main4.js"></script>
+
+
+</body>
+
+</html>
