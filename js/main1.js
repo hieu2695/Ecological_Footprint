@@ -48,8 +48,9 @@ var svg = d3.select("#stack-chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-      
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    ;
+ 
 svg.append("text")
         .attr("x", 190)
         .attr("y", -70)
@@ -105,12 +106,15 @@ d3.csv("data/StackAreaChart_Earths.csv", function(error, data) {
         .attr("x", 20) 
         .attr("dy", "0.75em")
         .attr("y", function(d, i) { return 20 * i; })
-        .text(function(d) {return d});
+        .text(function(d) {return d})
+        .style("fill", function(d, i) {
+            return get_colors(i);}); 
           
     legend.append("text")
-        .attr("x",0) 
+        .attr("x",10) 
         .attr("y",-10)
-        .text("Land");
+        .text("Land")
+        .style("fill","#797D7F");
 
     // setting for select Button        
     var selection = d3.select("#selectButton")
@@ -140,7 +144,7 @@ d3.csv("data/StackAreaChart_Earths.csv", function(error, data) {
         svg.select(".y.axis").remove(); // remove old axes
 
 
-        // Find the value of the hour with highest total value
+        // Find the highest total value
         var maxVal = d3.max(data.filter(function (d) {return d.Country == region}), function(d){
             var vals = d3.keys(d).map(
                 function(key){ 
@@ -177,8 +181,10 @@ d3.csv("data/StackAreaChart_Earths.csv", function(error, data) {
             .style("font", "22px avenir")
             .style("font-size","18px");
     
-
+        svg.style("fill","#ffffff");
         var browser = svg.selectAll(".browser").data(newdata); // browser 
+        var t = d3.transition().duration(500);
+        browser.transition(t);
 
         // svg elements for browser
         browser.enter()

@@ -37,6 +37,7 @@ body {
     width: 100%;
     float: top;
     padding: 0 0 0 0px;
+  
 }
 
 #header_logo {
@@ -197,12 +198,23 @@ ul#menu li a:hover {
 
 #reset-button, #play-button, #slider-div {
 	float: left;
-	margin-right:10px;
+    margin-right:10px;
+    width: 70px;
 }
 
 #slider-div {
-	width:300px;
-	margin-left:10px;
+	width:200px;
+    margin-left:30px;
+    margin-top: -5px;
+    margin-bottom:50px;
+ 
+   
+}
+#date-slider .ui-slider-handle {
+   z-index: 0;  
+   background-color: #147ef7;
+    
+
 }
 
 #reset-button, #play-button {
