@@ -12,8 +12,7 @@ body {
     min-height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    
-
+  
 }
 
 
@@ -48,7 +47,9 @@ body {
     height: 150px;
     width: 200px;
     margin-left: 40px;
-    margin-top: 20px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+
 }
 
 #header_text {
@@ -59,8 +60,7 @@ body {
     letter-spacing: 2px;
     word-spacing: 0.1em;
     margin-top: 30px;
-    margin-left: 260px;
-    padding: 0px 0 0px 0px;
+    margin-left: 200px;
     text-align: right;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 40px;
@@ -138,9 +138,13 @@ ul#menu li a:hover {
     line-height: 1.7;
     padding: 200px 120px 50px 30px;
     font-size: 110%;
+    
 }
 
 
+.col-md-10 {
+    background: #ffffff;
+}
 .filter_class {
     line-height: 1.0;
     font-family: 'Times New Roman', Times, serif;
