@@ -142,7 +142,7 @@ ul#menu li a:hover {
 }
 
 
-.col-md-10 {
+#content .col-md-10 {
     background: #ffffff;
 }
 .filter_class {
